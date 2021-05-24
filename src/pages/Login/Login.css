@@ -1,8 +1,13 @@
 .LoginForm{
-    max-width: 350px;
-    min-height: 400px;
+    min-width: 350px;
+    min-height: 450px;
     border-radius: 15px;
-    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 40px 0px rgba(176, 16, 240, 0.4);
+    background-color: white;
+    align-self: center;
+    position:absolute;
+    z-index: 3;
+    
 }
 
 .LoginForm__icon{
@@ -20,9 +25,10 @@
     height: 100px;
     align-self: center;
     overflow: hidden;
-    position: absolute;
-    left: 175px;
-    margin-top: 15px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .LoginForm__inputs{
@@ -31,5 +37,5 @@
 }
 
 .LoginForm__inputs input{
-
+    margin-bottom: 20px;
 }

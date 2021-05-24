@@ -9,7 +9,7 @@ function App() {
     <React.Fragment>
       <Layout>
         {/* <Main title={"Wellcome"}></Main> */}
-        <NewBadge></NewBadge>
+        {/* <NewBadge></NewBadge> */}
         <Login></Login>
         
       </Layout>
