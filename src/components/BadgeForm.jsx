@@ -14,20 +14,23 @@ class BadgeForm extends React.Component {
 
                             <label className="mb-1">Profile Picture URL:</label>
                             <input type="text" className="form-control" name="profile_picture" onChange={this.props.onChange}
-                                value={this.props.formValues.name} />
+                                value={this.props.formValues.profile_picture} />
 
-                            <label className="mb-1">Badge Hero URL:</label>
-                            <input type="text" className="form-control" name="badge_hero_url" onChange={this.props.onChange}
-                                value={this.props.formValues.name} />
+                            <label className="mb-1">Header picture URL:</label>
+                            <input type="text" className="form-control" name="header_picture" onChange={this.props.onChange}
+                                value={this.props.formValues.header_picture} />
 
                             <label className="mb-1">Age:</label>
                             <input type="text" className="form-control" name="age" onChange={this.props.onChange}
-                                value={this.props.formValues.name} />
+                                value={this.props.formValues.age} />
 
                             <label className="mb-1">City:</label>
                             <input type="text" className="form-control" name="city" onChange={this.props.onChange}
-                                value={this.props.formValues.name} />
+                                value={this.props.formValues.city} />
 
+                            <button type="submit" className="Submit__button">
+                                Save
+                            </button>
                         </div>
                     </form>
                 </div>

@@ -21,6 +21,19 @@ class NewBadge extends React.Component{
         }
     }
 
+    handleChange = event => {
+        this.setState({
+            form:{
+                ...this.state.form,
+                [event.target.name]: event.target.value
+            }
+        })
+    }
+
+    handleSubmimt = async (event) => {
+        event.preventDefault();
+    }
+    
     render(){
         return(
             <React.Fragment>
@@ -40,7 +53,10 @@ class NewBadge extends React.Component{
                                 ></Badge>
                         </div>
                         <div className="col">
-                            <BadgeForm formValues={this.state.form}></BadgeForm>
+                            <BadgeForm 
+                            onChange={this.handleChange}
+                            formValues={this.state.form}>
+                            </BadgeForm>
                         </div>
                     </div>
                 </div>
