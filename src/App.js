@@ -9,8 +9,8 @@ function App() {
     <React.Fragment>
       <Layout>
         {/* <Main title={"Wellcome"}></Main> */}
-        {/* <NewBadge></NewBadge> */}
-        <Login></Login>
+        <NewBadge></NewBadge>
+        {/* <Login></Login> */}
         
       </Layout>
     </React.Fragment>
