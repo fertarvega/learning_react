@@ -7,7 +7,7 @@
     align-self: center;
     position:absolute;
     z-index: 3;
-    
+    padding-bottom: 90px;
 }
 
 .LoginForm__icon{
@@ -31,14 +31,6 @@
     margin-right: auto;
 }
 
-.LoginForm__forgot{
-    color: rgba(255, 145, 0, 0.89);
-    margin-left: 185px;
-    margin-top: 15px;
-    font-style: italic;
-    font-weight: 500;
-    position: absolute;
-}
 
 .LoginForm__inputs{
     margin-bottom: -15px;
@@ -55,4 +47,42 @@
     width: 350px;
     height: 38px;
     padding-left: 10px;
+}
+
+.LoginForm__button{
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 5px;
+    display: block;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid purple;
+    margin-bottom: 15px;
+}
+
+.LoginForm__button:hover{
+    background-color: rgb(156, 47, 245);
+    color: white;
+    font-weight: bold;
+    
+}
+
+.LoginForm__forgot{
+    color: rgba(255, 145, 0, 0.89);
+    margin-left: 185px;
+    margin-top: 15px;
+    font-style: italic;
+    font-weight: 500;
+    position: absolute;
+}
+
+.LoginForm__register{
+    color: rgba(255, 145, 0, 0.89);
+    margin-left: 60px;
+    margin-top: 45px;
+    font-style: italic;
+    font-weight: 500;
+    position: absolute;
 }
