@@ -11,9 +11,6 @@ function App() {
   return (
     <BrowserRouter>
       <Layout>
-        {/* <Main title={"Wellcome"}></Main> */}
-        {/* <NewBadge></NewBadge> */}
-        {/* <Login></Login> */}
         <Switch>
           <Route exact path="/" component={Main}></Route>
           <Route exact path="/new" component={NewBadge}></Route>
