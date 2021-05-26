@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Hero from "../../components/Hero"
+import {Link} from "react-router-dom"
 import "./Register.css"
 
 class Register extends Component {
@@ -37,10 +38,12 @@ class Register extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <button className="RegisterForm__button">
-                                Register
-                            </button>
-                                <a href="" className="RegisterForm__forgot">Do you have an account? Click here</a>
+                            <Link className="Linkhidden" to="/new">
+                                <button className="RegisterForm__button">
+                                    Register
+                                </button>
+                            </Link>
+                                <a href={"/new"} className="RegisterForm__forgot">Do you have an account? Click here</a>
                         </form>
                     </div>
                     <Hero h={"88vh"}></Hero>

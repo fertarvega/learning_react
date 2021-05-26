@@ -5,7 +5,7 @@ import "./style/MainButton.css"
 const Button = (props) =>{
     return(
         <React.Fragment>
-            <Link href="" className="Button" to="/new">
+            <Link href="" className="Button" to="/login">
                 <p>{props.contentText}</p>
             </Link>
         </React.Fragment>

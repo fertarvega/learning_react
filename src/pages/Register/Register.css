@@ -76,3 +76,11 @@
     font-weight: bold;
 
 }
+
+.Linkhidden{
+    color: white;
+}
+
+.Linkhidden:hover{
+    color: rgb(156, 47, 245);
+}
