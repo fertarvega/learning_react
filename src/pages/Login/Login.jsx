@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Hero from "../../components/Hero"
-import ButtonLogin from "../../components/MainButton"
 import "./Login.css"
 
 class Login extends Component {
@@ -20,7 +19,7 @@ class Login extends Component {
                             <h5>Password:</h5>
                             <input type="password"/>
                         </div>
-                        <ButtonLogin contentText={"Login"}></ButtonLogin>
+                       
                         <a href="" className="LoginForm__forgot">Forgot your password?</a>
                     </form>
                 </div>

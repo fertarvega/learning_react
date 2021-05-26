@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Route, Switch} from "react-router-dom"
-import Layout from './pages/Layout/Layout'
-import Login from './pages/Login/Login';
-import Main from './pages/main/Main'
+import Layout from "./pages/Layout/Layout"
+import Login from "./pages/Login/Login";
+import Main from "./pages/main/Main"
+import Register from "./pages/Register/Register"
 import NewBadge from "./pages/NewBadge/NewBadge"
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main}></Route>
           <Route exact path="/new" component={NewBadge}></Route>
+          <Route exact path="/register" component={Register}></Route>
+          <Route exact path="/login" component={Login}></Route>
           <Route component={Error}></Route>
         </Switch>
       </Layout>
