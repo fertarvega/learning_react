@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Hero from "../../components/Hero"
+import {Link} from "react-router-dom"
 import "./Login.css"
 
 class Login extends Component {
@@ -19,11 +20,14 @@ class Login extends Component {
                             <h5>Password:</h5>
                             <input type="password"/>
                         </div>
-                        <button className="RegisterForm__button">
-                                Sign in
-                        </button>
-                        <a href="" className="LoginForm__forgot">Forgot your password?</a>
-                        <a href="" className="LoginForm__register">You do not have account? Register here</a>
+                        <Link className="Linkhidden" to="/new">
+                            <button className="RegisterForm__button" href={"/new"}>
+                                    Sign in
+                            </button>
+                        </Link>
+        
+                            <a href="" className="LoginForm__forgot">Forgot your password?</a>
+                            <a href={"/register"} className="LoginForm__register">You do not have account? Register here</a>
                     </form>
                 </div>
                 <Hero h={"88vh"}></Hero>
