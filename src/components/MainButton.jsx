@@ -1,12 +1,13 @@
 import React from "react"
+import {Link} from "react-router-dom"
 import "./style/MainButton.css"
 
 const Button = (props) =>{
     return(
         <React.Fragment>
-            <a href="" className="Button">
+            <Link href="" className="Button" to="/new">
                 <p>{props.contentText}</p>
-            </a>
+            </Link>
         </React.Fragment>
     );
 }

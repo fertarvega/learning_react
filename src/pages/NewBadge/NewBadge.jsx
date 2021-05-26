@@ -3,6 +3,7 @@ import Hero from "../../components/Hero"
 import Badge from "../../components/Badge"
 import BadgeForm from "../../components/BadgeForm"
 import "./NewBadge.css"
+import api from '../../libs/api'
 
 class NewBadge extends React.Component{
 
@@ -24,16 +25,25 @@ class NewBadge extends React.Component{
     handleChange = event => {
         this.setState({
             form:{
-                ...this.state.form,
+                ... this.state.form,
                 [event.target.name]: event.target.value
             }
         })
     }
 
-    handleSubmimt = async (event) => {
+    handleSubmit = async (event) => {
         event.preventDefault();
+        this.setState({loading:true, error:null})
+
+        try{
+            await api.badges.create(this.state.form)
+            this.setState({loading:false, error:null})
+            this.props.history.push("/")
+        } catch (error){
+            this.setState({loading: false, error: error})
+        }
     }
-    
+
     render(){
         return(
             <React.Fragment>
