@@ -5,6 +5,7 @@ import Login from "./pages/Login/Login";
 import Main from "./pages/main/Main"
 import Register from "./pages/Register/Register"
 import NewBadge from "./pages/NewBadge/NewBadge"
+import Error from "./pages/Error/Error"
 
 function App() {
   return (
