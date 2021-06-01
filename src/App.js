@@ -6,6 +6,7 @@ import Main from "./pages/main/Main"
 import Register from "./pages/Register/Register"
 import NewBadge from "./pages/NewBadge/NewBadge"
 import Error from "./pages/Error/Error"
+import Badges from "./pages/Badges/Badges"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/register" component={Register}></Route>
           <Route exact path="/login" component={Login}></Route>
           <Route component={Error}></Route>
+          <Route exact path="/badges" component={Badges}></Route>
         </Switch>
       </Layout>
     </BrowserRouter>
