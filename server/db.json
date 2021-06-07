@@ -1,6 +1,26 @@
-
 {
-    "badges":[
-        
-    ]
+  "badges": [
+    {
+      "header_picture": "https://images.pexels.com/photos/7473737/pexels-photo-7473737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "profile_picture": "https://images.pexels.com/photos/7593815/pexels-photo-7593815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Fernando Tarango",
+      "age": "20",
+      "city": "Chihuahua",
+      "followers": "",
+      "likes": "",
+      "post": "",
+      "id": 1
+    },
+    {
+      "header_picture": "https://images.pexels.com/photos/7473737/pexels-photo-7473737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "profile_picture": "https://images.pexels.com/photos/7593815/pexels-photo-7593815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Fernando Tarango",
+      "age": "20",
+      "city": "Chihuahua",
+      "followers": "",
+      "likes": "",
+      "posts": "",
+      "id": 2
+    }
+  ]
 }
