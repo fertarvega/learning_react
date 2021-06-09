@@ -20,6 +20,7 @@ class NewBadge extends React.Component{
             followers:"",
             likes:"",
             posts:"",
+            post:"",
         }
     }
 
@@ -39,7 +40,7 @@ class NewBadge extends React.Component{
         try{
             await api.badges.create(this.state.form)
             this.setState({loading:false, error:null})
-            this.props.history.push("/")
+            this.props.history.push("/badges")
         } catch (error){
             this.setState({loading: false, error: error})
         }
@@ -53,8 +54,8 @@ class NewBadge extends React.Component{
                     <div className="row">
                         <div className="col">
                             <Badge
-                                header_picture = {this.state.form.header_img_url || "https://ak.picdn.net/shutterstock/videos/1033914530/thumb/1.jpg"}
-                                profile_picture = {this.state.form.profile_picture_url || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5_3GiNztyjNORByzyMdz3UhuL_1HzJ6VUyQ&usqp=CAU"}
+                                header_img_url = {this.state.form.header_img_url || "https://ak.picdn.net/shutterstock/videos/1033914530/thumb/1.jpg"}
+                                profile_picture_url = {this.state.form.profile_picture_url || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5_3GiNztyjNORByzyMdz3UhuL_1HzJ6VUyQ&usqp=CAU"}
                                 name = {this.state.form.name || "Albert Einstein"}
                                 age = {this.state.form.age || "60"}
                                 city = {this.state.form.city || "Colonia"}

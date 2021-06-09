@@ -13,12 +13,12 @@ class BadgeForm extends React.Component {
                                     value={this.props.formValues.name} />
 
                                 <label className="mb-1">Profile Picture URL:</label>
-                                <input type="text" className="form-control" name="profile_picture" onChange={this.props.onChange}
-                                    value={this.props.formValues.profile_picture} />
+                                <input type="text" className="form-control" name="profile_picture_url" onChange={this.props.onChange}
+                                    value={this.props.formValues.profile_picture_url} />
 
                                 <label className="mb-1">Header picture URL:</label>
-                                <input type="text" className="form-control" name="header_picture" onChange={this.props.onChange}
-                                    value={this.props.formValues.header_picture} />
+                                <input type="text" className="form-control" name="header_img_url" onChange={this.props.onChange}
+                                    value={this.props.formValues.header_img_url} />
 
                                 <label className="mb-1">Age:</label>
                                 <input type="text" className="form-control" name="age" onChange={this.props.onChange}
