@@ -5,13 +5,13 @@ class BadgesListItem extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <div className="BadgeListItem mt-5">
+                <div className="BadgesListItem mt-5">
                     <div className="col-5">
                         <div className="Item__profilePicture">
                             <img src={this.props.badge.profile_picture_url} alt="" />
                         </div>
                         <div className="Item__background">
-                            <img src={this.props.badge.header_image_url} alt="" />
+                            <img src={this.props.badge.header_img_url} alt="" />
                         </div>
                     </div>
                     <div className="col-7 my-5">

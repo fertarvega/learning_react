@@ -3,7 +3,8 @@ import Hero from "../../components/Hero"
 import Badge from "../../components/Badge"
 import BadgeForm from "../../components/BadgeForm"
 import "./NewBadge.css"
-import api from '../../libs/api'
+import Footer from "../../components/Footer"
+import api from '../../libs/fetch'
 
 class NewBadge extends React.Component{
 
@@ -11,8 +12,8 @@ class NewBadge extends React.Component{
         loading : false,
         error: null,
         form:{
-            header_picture:"",
-            profile_picture:"",
+            header_img_url:"",
+            profile_picture_url:"",
             name:"",
             age:"",
             city:"",
@@ -52,8 +53,8 @@ class NewBadge extends React.Component{
                     <div className="row">
                         <div className="col">
                             <Badge
-                                header_picture = {this.state.form.header_picture || "https://ak.picdn.net/shutterstock/videos/1033914530/thumb/1.jpg"}
-                                profile_picture = {this.state.form.profile_picture || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5_3GiNztyjNORByzyMdz3UhuL_1HzJ6VUyQ&usqp=CAU"}
+                                header_picture = {this.state.form.header_img_url || "https://ak.picdn.net/shutterstock/videos/1033914530/thumb/1.jpg"}
+                                profile_picture = {this.state.form.profile_picture_url || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5_3GiNztyjNORByzyMdz3UhuL_1HzJ6VUyQ&usqp=CAU"}
                                 name = {this.state.form.name || "Albert Einstein"}
                                 age = {this.state.form.age || "60"}
                                 city = {this.state.form.city || "Colonia"}
@@ -71,7 +72,7 @@ class NewBadge extends React.Component{
                         </div>
                     </div>
                 </div>
-
+                <Footer s={{bottom: 0}}></Footer>
             </React.Fragment>
         );
     }

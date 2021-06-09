@@ -7,8 +7,6 @@
     justify-content: center;
     color: whitesmoke;
     background-color: rgba(255, 149, 61, 0.924);
-
-    position: absolute;
     bottom: 0;
     z-index: 100;
 }

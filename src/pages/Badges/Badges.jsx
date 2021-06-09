@@ -1,7 +1,8 @@
 import React from "react"
 import SkeletonItem from "../../components/SkeletonItem"
 import BadgesList from "../../components/BadgeList"
-import api from "../../libs/api"
+import Footer from "../../components/Footer"
+import api from "../../libs/fetch"
 import "./Badges.css"
 
 class Badges extends React.Component {
@@ -10,6 +11,7 @@ class Badges extends React.Component {
         loading: true,
         error: null,
         data: undefined,
+        handle_footer: {bottom:0},
     };
 
     componentDidMount() {
@@ -23,6 +25,12 @@ class Badges extends React.Component {
             const data = await api.badges.list();
             data.reverse()
             this.setState({ loading: false, data: data });
+
+            if(data.lenght > 3){
+                this.setState({handle_footer:{position:"relative"}})
+            }else{
+                this.setState({handle_footer:{bottom:0}})
+            }
 
         } catch (error) {
             this.setState({ loading: false, error: error, data: [] });
@@ -48,6 +56,7 @@ class Badges extends React.Component {
                 </div>
 
                 <BadgesList badges={this.state.data}></BadgesList>
+                <Footer s={this.state.handle_footer}></Footer>
             </React.Fragment>
         );
     }
