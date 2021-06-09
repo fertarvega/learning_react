@@ -1,6 +1,6 @@
 import React from "react"
 import SkeletonItem from "../../components/SkeletonItem"
-import BadgesList from "../../components/BadgeList"
+import BadgesList from "../../components/BadgesList"
 import Footer from "../../components/Footer"
 import Button from "../../components/MainButton"
 import api from "../../libs/fetch"
