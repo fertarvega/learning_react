@@ -4,6 +4,8 @@ import Badge from "../../components/Badge"
 import BadgeForm from "../../components/BadgeForm"
 import "./NewBadge.css"
 import Footer from "../../components/Footer"
+import PageError from "../../components/PageError"
+import Loader from "../../components/Loader"
 import api from '../../libs/fetch'
 
 class NewBadge extends React.Component{
@@ -47,6 +49,16 @@ class NewBadge extends React.Component{
     }
 
     render(){
+        
+        if(this.state.loading){
+            return <Loader></Loader>
+        }
+
+
+        if (this.state.error) {
+            return <PageError error={this.state.error.message}></PageError>
+        }
+
         return(
             <React.Fragment>
                 <Hero h={"15vh"}></Hero>

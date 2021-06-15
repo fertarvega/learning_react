@@ -2,9 +2,9 @@ import React from "react"
 import SkeletonItem from "../../components/SkeletonItem"
 import BadgesList from "../../components/BadgesList"
 import Footer from "../../components/Footer"
-import Button from "../../components/MainButton"
 import api from "../../libs/fetch"
 import "./Badges.css"
+import PageError from "../../components/PageError"
 
 class Badges extends React.Component {
 
@@ -12,12 +12,14 @@ class Badges extends React.Component {
         loading: true,
         error: null,
         data: undefined,
-        handle_footer: {bottom:0},
+        handle_footer: { bottom: 0 },
     };
 
     componentDidMount() {
         this.fetchData();
-        this.setFetchInterval();
+        if (this.state.error) {
+            this.setFetchInterval();
+        }
     }
 
     fetchData = async () => {
@@ -27,14 +29,14 @@ class Badges extends React.Component {
             data.reverse()
             this.setState({ loading: false, data: data });
 
-            if(data.lenght > 3){
-                this.setState({handle_footer:{position:"relative"}})
-            }else{
-                this.setState({handle_footer:{bottom:0}})
+            if (data.lenght > 3) {
+                this.setState({ handle_footer: { position: "relative" } })
+            } else {
+                this.setState({ handle_footer: { bottom: 0 } })
             }
 
         } catch (error) {
-            this.setState({ loading: false, error: error, data: [] });
+            this.setState({ loading: false, error: error });
         }
     }
 
@@ -47,21 +49,16 @@ class Badges extends React.Component {
     }
 
     render() {
-        if(this.state.loading===true && !this.state.data){
+        if (this.state.loading === true && !this.state.data) {
             return <SkeletonItem></SkeletonItem>
         }
+
+        if (this.state.error) {
+            return <PageError error={this.state.error.message}></PageError>
+        }
+
         return (
             <React.Fragment>
-                {/* <div className="Badges__container">
-                    <div className="Badges__button">
-                        <Button
-                            theme={"Button-light"}
-                            contentText = {"New Badge"}
-                            link = {"/new"}
-                        ></Button>
-                    </div>
-                </div> */}
-
                 <BadgesList badges={this.state.data}></BadgesList>
                 <Footer s={this.state.handle_footer}></Footer>
             </React.Fragment>
