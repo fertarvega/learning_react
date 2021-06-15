@@ -52,7 +52,7 @@ class Badges extends React.Component {
         }
         return (
             <React.Fragment>
-                <div className="Badges__container">
+                {/* <div className="Badges__container">
                     <div className="Badges__button">
                         <Button
                             theme={"Button-light"}
@@ -60,7 +60,7 @@ class Badges extends React.Component {
                             link = {"/new"}
                         ></Button>
                     </div>
-                </div>
+                </div> */}
 
                 <BadgesList badges={this.state.data}></BadgesList>
                 <Footer s={this.state.handle_footer}></Footer>
