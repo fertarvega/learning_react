@@ -38,12 +38,12 @@ class Register extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <Link className="Linkhidden" to="/new">
+                            <Link className="Linkhidden" to="/login">
                                 <button className="RegisterForm__button">
-                                    Register
+                                    Sign up
                                 </button>
                             </Link>
-                                <a href={"/new"} className="RegisterForm__forgot">Do you have an account? Click here</a>
+                                <a href={"/login"} className="RegisterForm__forgot">Do you have an account? Click here</a>
                         </form>
                     </div>
                     <Hero h={"88vh"}></Hero>

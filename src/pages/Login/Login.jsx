@@ -20,8 +20,8 @@ class Login extends Component {
                             <h5>Password:</h5>
                             <input type="password"/>
                         </div>
-                        <Link className="Linkhidden" to="/new">
-                            <button className="RegisterForm__button" href={"/new"}>
+                        <Link className="Linkhidden" to="/badges">
+                            <button className="RegisterForm__button">
                                     Sign in
                             </button>
                         </Link>
